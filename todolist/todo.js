@@ -5,24 +5,29 @@ function loaded() {
  //ボタンを押されたときに実行
  $("#button").click(
   function(){
- 	 saveText();
+ 	 localsave();
  	 todolist();
  });
 }
 
-function saveText() {
+function localsave() {
  var text = $("#Text");
  var time = new Date();
  localStorage.setItem(time, text.val());
 
- text.val("");
+ text.val(""); //textboxを空にする
 }
 
 function todolist() {
- for(var i = 0; i < localStorage.length; i++){
-  var key = localStorage.key(i);
-  var value = localStorage.getItem(key)
-		//cosole.log(localStorage.getItem(key));
+
+ var list = $("#list");
+ list.children().remove();
+
+ var key,value,html = [];
+ for(var i=0; i<localStorage.length; i++){
+  key = localStorage.key(i);
+  value = localStorage.getItem(key)
   html.push("<p>" + value + "</p>");
-	}
+ }
+ list.append(html.join(''));
 }
