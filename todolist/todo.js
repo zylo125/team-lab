@@ -17,7 +17,7 @@ function localsave() {
 
  text.val(""); //textboxを空にする
 }
-
+//ローカルストレージに保存したデータを表示
 function todolist() {
 
  var list = $("#list");
@@ -29,5 +29,14 @@ function todolist() {
   value = localStorage.getItem(key)
   html.push("<p>" + value + "</p>");
  }
+ html.sort(
+	function(a,b){
+  var aTime = a["Time"];
+  var bTime = b["Time"];
+  if( a > b ) return -1;
+  if( a < b ) return 1;
+  return 0;
+ }
+);
  list.append(html.join(''));
 }
