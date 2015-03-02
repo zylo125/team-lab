@@ -8,16 +8,15 @@ function loaded() {
   function(){
  	 localsave();
  	 todolist();
- 	 contrary();
+ 	 //contrary();
  });
 }
 
 function localsave() {
  var text = $("#Text");
  var time = new Date();
- new Date( JSON.parse( JSON.stringify(time) ) );
- console.log(time);
  localStorage.setItem(time, text.val());
+ $("li").prepend("#Text");
 
  text.val(""); //textboxを空にする
 }
@@ -35,6 +34,7 @@ function todolist() {
  }
  list.append(html.join(''));
 }
+
 function contrary(){
  var list = $('#list > li').toArray().reverse();
  $('#list').empty().append(list);
