@@ -2,11 +2,13 @@ $(loaded);
 
 function loaded() {
  todolist();
+ contrary();
  //ボタンを押されたときに実行
  $("#button").click(
   function(){
  	 localsave();
  	 todolist();
+ 	 contrary();
  });
 }
 
@@ -27,22 +29,13 @@ function todolist() {
 
  var key,value,html = [];
  for(var i=0; i<localStorage.length; i++){
-  key = localStorage.key(i);
+  key = localStorage.key(JSON.parse(JSON.stringify(i)));
   value = localStorage.getItem(key);
-  key.sort(
-	function(a,b){
-		var aTime = a["kei"];
-		var bTime = b["key"];
-		if( a > b ) return -1;
-		if( a < b ) return 1;
-		return 0;
-    });
- // var length = localStorage.length;
- // length--;
- // for(var i=length; 0 < i; i--){
- //  key = localStorage.key(i);
- //  value = localStorage.getItem(key)
   html.push("<li>"  + value +"</li>");
  }
  list.append(html.join(''));
+}
+function contrary(){
+ var list = $('#list > li').toArray().reverse();
+ $('#list').empty().append(list);
 }
