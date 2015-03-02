@@ -8,7 +8,7 @@ function loaded() {
   function(){
  	 localsave();
  	 todolist();
- 	 //contrary();
+ 	 contrary();
  });
 }
 
@@ -16,7 +16,7 @@ function localsave() {
  var text = $("#Text");
  var time = new Date();
  localStorage.setItem(time, text.val());
- $("li").prepend("#Text");
+ //$("ul#list").prepend("<li>" + showtext+ "</li>");
 
  text.val(""); //textboxを空にする
 }
