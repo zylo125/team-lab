@@ -29,6 +29,14 @@ function todolist() {
  for(var i=0; i<localStorage.length; i++){
   key = localStorage.key(i);
   value = localStorage.getItem(key);
+  key.sort(
+	function(a,b){
+		var aTime = a["kei"];
+		var bTime = b["key"];
+		if( a > b ) return -1;
+		if( a < b ) return 1;
+		return 0;
+    });
  // var length = localStorage.length;
  // length--;
  // for(var i=length; 0 < i; i--){
