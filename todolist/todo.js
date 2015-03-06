@@ -1,5 +1,4 @@
 $(loaded);
-
 function loaded() {
  todolist();
  contrary();
@@ -15,8 +14,8 @@ function loaded() {
 function localsave() {
  var text = $("#Text");
  var time = new Date();
+
  localStorage.setItem(time, text.val());
- //$("ul#list").prepend("<li>" + showtext+ "</li>");
 
  text.val(""); //textboxを空にする
 }
@@ -28,11 +27,12 @@ function todolist() {
 
  var key,value,html = [];
  for(var i=0; i<localStorage.length; i++){
-  key = localStorage.key(JSON.parse(JSON.stringify(i)));
+  key = localStorage.key(i);
   value = localStorage.getItem(key);
-  html.push("<li>"  + value +"</li>");
+  value = $('<div>').html(value).text();
+  html.push("<li>" + value +"</li>");
  }
- list.append(html.join(''));
+ list.append((html.join("")));
 }
 
 function contrary(){

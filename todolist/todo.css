@@ -1,22 +1,4 @@
-/*#list {
-  width:500px;
-  font-size: 16px;
-  color:#333333;
-  background:#FFF;
-  padding:20px;
-}
-#list p {
-  list-style-type : none;
-  padding:5px 10px;
-  border-bottom:1px solid #84b2e0;
-}
-#list p:first-child{
-  border-top:0px;
-}
-#list p:last-child{
-  border-bottom:0px;
-}*/
-h2{
+h1{
     border:solid 1px #ddd;
   -moz-border-radius: 5px; /* FF */
   -webkit-border-radius: 5px;/* Webkit */
@@ -29,27 +11,10 @@ h2{
   behavior: url(http://www.webcreatorbox.com/sample/images/PIE.htc);  /* ie */
   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
 }
-h2 span {
+h1 span {
   border-left:5px #3cf solid;
   padding-left:10px;
 }
-/*#form{
-    border:solid 1px #ddd;
-  -moz-border-radius: 5px; /* FF */
-  /*-webkit-border-radius: 5px;*//* Webkit */
-  /*border-radius: 5px;
-  background: #eee;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
-    background: -moz-linear-gradient(top,  #fff,  #eee);
-    padding: 5px;
-  -pie-background:linear-gradient(top,  #fff,  #eee);
-  behavior: url(http://www.webcreatorbox.com/sample/images/PIE.htc);  /* ie */
-  /*font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
-}
-div span {
-  border-left:5px #3cf solid;
-  padding-left:10px;
-}*/
 #list {
   border: 1px solid #ccc;
   padding: 0;
@@ -63,7 +28,6 @@ li{
   background: -moz-linear-gradient(top,  #eee,  #ddd);
   -pie-background:linear-gradient(top,  #eee,  #ddd);
   behavior: url(http://www.webcreatorbox.com/sample/images/PIE.htc);  /* ie */
-    /*padding: 5px;*/
     padding: 5px;
     border-bottom: 1px #ccc solid;
     border-top: 1px #fff solid;
