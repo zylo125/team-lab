@@ -31,7 +31,7 @@ li{
     padding: 5px;
     border-bottom: 1px #ccc solid;
     border-top: 1px #fff solid;
-    list-style: inside square;
+    list-style: none;
     margin:0;
 }
 body {
