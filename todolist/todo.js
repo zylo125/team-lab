@@ -26,13 +26,17 @@ function todolist() {
  list.children().remove();
 
  var key,value,html = [];
+ var check;
  for(var i=0; i<localStorage.length; i++){
   key = localStorage.key(i);
   value = localStorage.getItem(key);
-  value = $('<div>').html(value).text();
-  html.push("<li>" + value +"</li>");
+  value = $('<div>').html(value).text(); //正規表現でhtmlタグをエスケープ
+  //check = $('#todolist').prepend('<input type="checkbox" name="test"></br>');
+  check = $("#li").before('<input type="checkbox" name="test">');
+  console.log(check);
+  html.push(check + "<li>" + value +"</li>");
  }
- list.append((html.join("")));
+ list.append(html.join(""));
 }
 
 function contrary(){
