@@ -1,0 +1,36 @@
+#h1{
+  padding:0px;
+  width:300px;
+  border:10px solid black;
+  background-color:black;
+}
+h1{
+  display:block;
+  line-height:4em;
+
+  font-size: 20px;
+  font-weight: normal;
+  color: #e9ebec;
+  letter-spacing: 0;
+  border: none;
+  padding: 0px 20px 0px 20px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #244386));
+  margin: 0;
+}
+div#form{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #244386));
+	padding:0px 0px 0px 8px;
+}
+ul{
+  padding:0px;
+  list-style: none;
+  margin:0px 0px 0px 0px;
+  line-height:2em;
+}
+li{
+   padding: 10px;
+   margin: 0;
+   display:block;
+   -webkit-box-shadow: 1px 1px 3px #000;　/* Safari,Google Chrome用 */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #c8d7dc));
+}
