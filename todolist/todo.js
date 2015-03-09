@@ -30,7 +30,7 @@ function todolist() {
   key = localStorage.key(i);
   value = localStorage.getItem(key);
   value = $('<div>').html(value).text(); //正規表現でhtmlタグをエスケープ
-  html.push('<li>'+'<input type="checkbox" name="test">'+ value +'</li>');
+  html.push('<li>'+'<input type="checkbox" name="check">'+ value +'</li>');
  }
  list.append(html.join(""));
 }
@@ -39,3 +39,4 @@ function contrary(){
  var list = $('#list > li').toArray().reverse();
  $('#list').empty().append(list);
 }
+
